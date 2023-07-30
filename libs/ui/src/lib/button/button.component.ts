@@ -1,6 +1,4 @@
-import { Component, Input } from '@angular/core';
-
-export type ButtonType = 'button' | 'submit' | 'reset';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'test-nx-button',
@@ -8,5 +6,4 @@ export type ButtonType = 'button' | 'submit' | 'reset';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() type: ButtonType = 'button';
 }
