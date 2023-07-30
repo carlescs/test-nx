@@ -12,12 +12,25 @@ const meta: Meta<ButtonComponent> = {
          imports: [UiModule],
       }),
    ],
+   args:{
+      buttonClass: 'primary',
+      size: 'md'
+   },
    argTypes: {
       buttonClass: {
-         options: ['primary', 'secondary'],
+         options: ['primary', 'secondary','danger','warning','success'],
+         control: { type: 'select' }
+      },
+      size: {
+         options: ['sm', 'md', 'lg'],
          control: { type: 'select' }
       }
-   }
+   },
+   render: (args) => ({
+      props: { ...args },
+      userDefinedTemplate: true,
+      template: '<test-nx-button [buttonClass]="buttonClass" [size]="size">{{ngContent}}</test-nx-button>',
+   }),
 };
 
 export default meta;
@@ -28,22 +41,12 @@ export const PrimaryButton: Story = {
    args: {
       ngContent: "Primary Button",
       buttonClass: "primary"
-   },
-   render: (args) => ({
-      props: { ...args },
-      userDefinedTemplate: true,
-      template: '<test-nx-button [buttonClass]="buttonClass">{{ngContent}}</test-nx-button>',
-   }),
+   }
 };
 
 export const SecondaryButton: Story = {
    args: {
       ngContent: "Secondary Button",
       buttonClass: "secondary"
-   },
-   render: (args) => ({
-      props: { ...args },
-      userDefinedTemplate: true,
-      template: '<test-nx-button [buttonClass]="buttonClass">{{ngContent}}</test-nx-button>',
-   }),
+   }
 };

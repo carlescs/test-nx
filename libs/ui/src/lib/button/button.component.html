@@ -1,3 +1,10 @@
-<button [class]="buttonClass">
+<button [class.primary]="buttonClass==='primary'"
+    [class.secondary]="buttonClass==='secondary'"
+    [class.danger]="buttonClass==='danger'"
+    [class.warning]="buttonClass==='warning'"
+    [class.success]="buttonClass==='success'"
+    [class.sm]="size==='sm'"
+    [class.md]="size==='md'"
+    [class.lg]="size==='lg'">
     <ng-content></ng-content>
 </button>

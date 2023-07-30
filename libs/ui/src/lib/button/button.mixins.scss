@@ -1,0 +1,22 @@
+@function contrastText($color) {
+    $lightness: lightness($color);
+    @if ($lightness < 50) {
+        @return black;
+    }
+    @else {
+        @return white;
+    }
+}
+
+@mixin buttonStyles($color){
+    background-color: $color;
+    color: contrastText($color);
+
+    &:hover{
+        background-color: scale-color($color: $color,$lightness: 30%);
+    }
+
+    &:active{
+        background-color: scale-color($color: $color,$lightness: -30%);
+    }
+}

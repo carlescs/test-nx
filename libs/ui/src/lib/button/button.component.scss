@@ -1,19 +1,40 @@
+@import 'button.mixins';
+
 button{
-    border-radius: 3px;
-    padding: 5px 10px;
-
+    border-radius: 4px;
     &.primary{
-        background-color: blue;
-        color: white;
-
-        &:hover{
-            background-color: darkblue;
-        }
+        @include buttonStyles($color:blue);
     }
 
     &.secondary{
-        background-color: gray;
-        color: white;
+        @include buttonStyles($color:gray);
     }
 
+    &.danger{
+        @include buttonStyles($color:red);
+    }
+
+    &.warning{
+        @include buttonStyles($color:orange);
+    }
+
+    &.success{
+        @include buttonStyles($color:green);
+    }
+
+    &.sm{
+        height: 24px;
+        padding: 0 8px;
+    }
+
+    &.md{
+        height: 36px;
+        padding: 0 16px;
+    }
+
+    &.lg{
+        height: 54px;
+        padding: 0 24px;
+        font-size: large;
+    }
 }
