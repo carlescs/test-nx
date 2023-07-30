@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'test-nx-button',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
+  @Input() 
+  public buttonClass:'primary'|'secondary'='primary';
 }

@@ -1,4 +1,19 @@
 button{
     border-radius: 3px;
     padding: 5px 10px;
+
+    &.primary{
+        background-color: blue;
+        color: white;
+
+        &:hover{
+            background-color: darkblue;
+        }
+    }
+
+    &.secondary{
+        background-color: gray;
+        color: white;
+    }
+
 }

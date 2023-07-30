@@ -6,27 +6,38 @@ import { UiModule } from '../ui.module';
 const meta: Meta<typeof ButtonComponent> = {
    component: ButtonComponent,
    title: 'Button',
+   tags:['autodocs'],
    decorators: [
       moduleMetadata({
          imports: [UiModule],
       }),
-   ],
-   render: (args) => ({
-      props: args,
-      userDefinedTemplate: true,
-      template: '<test-nx-button>{{ngContent}}</test-nx-button>',
-   }),
+   ]
 };
 
 export default meta;
 
-type Story = StoryObj<typeof ButtonComponent&{ngContent:string}>;
+type Story = StoryObj<ButtonComponent & {ngContent:string}>;
 
-export const Button: Story = {
+export const PrimaryButton: Story = {
    args:{
-      ngContent:"Test"
+      ngContent:"Primary Button",
+      buttonClass:"primary"
+   }   ,
+   render: (args) => ({
+      props: {...args},
+      userDefinedTemplate: true,
+      template: '<test-nx-button [buttonClass]="buttonClass">{{ngContent}}</test-nx-button>',
+   }),
+};
+
+export const SecondaryButton: Story = {
+   args:{
+      ngContent:"Secondary Button",
+      buttonClass:"secondary"
    },
-   parameters: {
-      type: 'button',
-   }
+   render: (args) => ({
+      props: {...args},
+      userDefinedTemplate: true,
+      template: '<test-nx-button [buttonClass]="buttonClass">{{ngContent}}</test-nx-button>',
+   }),
 };
