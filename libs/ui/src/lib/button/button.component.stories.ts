@@ -3,7 +3,9 @@ import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
 import { UiModule } from '../ui.module';
 
-const meta: Meta<ButtonComponent> = {
+type argTypes=ButtonComponent & { ngContent: string };
+
+const meta: Meta<argTypes> = {
    component: ButtonComponent,
    title: 'Button',
    tags: ['autodocs'],
@@ -19,11 +21,20 @@ const meta: Meta<ButtonComponent> = {
    argTypes: {
       buttonClass: {
          options: ['primary', 'secondary','danger','warning','success'],
-         control: { type: 'select' }
+         control: { type: 'select' },
+         label: 'Button Class',
+         name: 'Button Class'
       },
       size: {
          options: ['sm', 'md', 'lg'],
-         control: { type: 'select' }
+         control: { type: 'select' },
+         label: 'Button Size',
+         name: 'Button Size'
+      },
+      ngContent: {
+         control: { type: 'text' },
+         label: 'Button Text',
+         name: 'Button Text'
       }
    },
    render: (args) => ({
@@ -35,7 +46,7 @@ const meta: Meta<ButtonComponent> = {
 
 export default meta;
 
-type Story = StoryObj<ButtonComponent & { ngContent: string }>;
+type Story = StoryObj<argTypes>;
 
 export const PrimaryButton: Story = {
    args: {
@@ -48,5 +59,29 @@ export const SecondaryButton: Story = {
    args: {
       ngContent: "Secondary Button",
       buttonClass: "secondary"
+   }
+};
+
+export const LargeButton: Story = {
+   args: {
+      ngContent: "Secondary Button",
+      buttonClass: "primary",
+      size: 'lg'
+   }
+};
+
+export const MediumButton: Story = {
+   args: {
+      ngContent: "Secondary Button",
+      buttonClass: "primary",
+      size: 'md'
+   }
+};
+
+export const SmallButton: Story = {
+   args: {
+      ngContent: "Secondary Button",
+      buttonClass: "primary",
+      size: 'sm'
    }
 };
