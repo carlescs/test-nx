@@ -1,6 +1,6 @@
 @function contrastText($color) {
     $lightness: lightness($color);
-    @if ($lightness < 50) {
+    @if ($lightness > 50) {
         @return black;
     }
     @else {
@@ -13,10 +13,14 @@
     color: contrastText($color);
 
     &:hover{
-        background-color: scale-color($color: $color,$lightness: 30%);
+        $hovercolor: scale-color($color: $color,$lightness: 30%);
+        background-color: $hovercolor;
+        color: contrastText($hovercolor);
     }
 
     &:active{
-        background-color: scale-color($color: $color,$lightness: -30%);
+        $activecolor: scale-color($color: $color,$lightness: -30%);
+        background-color: $activecolor;
+        color: contrastText($activecolor);
     }
 }

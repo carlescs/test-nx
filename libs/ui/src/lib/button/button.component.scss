@@ -1,7 +1,13 @@
 @import 'button.mixins';
+@import '../scss/mixins';
 
 button{
     border-radius: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
     &.primary{
         @include buttonStyles($color:blue);
     }
@@ -19,7 +25,7 @@ button{
     }
 
     &.success{
-        @include buttonStyles($color:green);
+        @include buttonStyles($color:lightgreen);
     }
 
     &.sm{
@@ -36,5 +42,11 @@ button{
         height: 54px;
         padding: 0 24px;
         font-size: large;
+    }
+}
+
+@include below($md){
+    button{
+        width: 100%;
     }
 }
