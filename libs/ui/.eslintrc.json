@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "test-nx",
+            "prefix": "ccs",
             "style": "kebab-case"
           }
         ]

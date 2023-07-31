@@ -2,7 +2,7 @@
   "name": "test-nx",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "test-nx",
+  "prefix": "ccs",
   "sourceRoot": "apps/test-nx/src",
   "tags": [],
   "targets": {

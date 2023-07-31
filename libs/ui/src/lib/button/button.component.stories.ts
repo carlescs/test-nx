@@ -40,7 +40,7 @@ const meta: Meta<argTypes> = {
    render: (args) => ({
       props: { ...args },
       userDefinedTemplate: true,
-      template: '<test-nx-button [buttonClass]="buttonClass" [size]="size">{{ngContent}}</test-nx-button>',
+      template: '<ccs-button [buttonClass]="buttonClass" [size]="size">{{ngContent}}</ccs-button>',
    }),
 };
 

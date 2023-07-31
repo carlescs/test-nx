@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'test-nx-button',
+  selector: 'ccs-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })

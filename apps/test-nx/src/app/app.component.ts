@@ -5,7 +5,7 @@ import { UiModule } from '@test-nx/ui';
 @Component({
   standalone: true,
   imports: [RouterModule, UiModule],
-  selector: 'test-nx-root',
+  selector: 'ccs-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
