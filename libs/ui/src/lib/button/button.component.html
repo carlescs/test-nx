@@ -1,4 +1,6 @@
-<button [class.primary]="buttonClass==='primary'"
+<button
+    [type]="type"
+    [class.primary]="buttonClass==='primary'"
     [class.secondary]="buttonClass==='secondary'"
     [class.danger]="buttonClass==='danger'"
     [class.warning]="buttonClass==='warning'"
@@ -6,6 +8,7 @@
     [class.sm]="size==='sm'"
     [class.md]="size==='md'"
     [class.lg]="size==='lg'"
-    (click)="buttonClick.emit()">
+    (click)="buttonClick.emit()"
+    (dblclick)="buttonDblClick.emit()">
     <ng-content></ng-content>
 </button>

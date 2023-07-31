@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./button.component.scss'],
 })
 /**
- * Represents a button component.
+ * Represents a button component with customizable class, size, and type.
  */
 export class ButtonComponent {
   /**
@@ -35,4 +35,10 @@ export class ButtonComponent {
    */
   @Output()
   public buttonClick: EventEmitter<void> = new EventEmitter<void>();
+  
+  /**
+   * Emits an event when the button is double-clicked.
+   */
+  @Output()
+  public buttonDblClick: EventEmitter<void> = new EventEmitter<void>();
 }
