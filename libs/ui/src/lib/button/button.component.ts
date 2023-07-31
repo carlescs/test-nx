@@ -1,16 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'test-nx-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
+/**
+ * Represents a button component.
+ */
 export class ButtonComponent {
   /**
-   * The class of the button, which can be either 'primary' or 'secondary'.
+   * The class of the button, which can be either 'primary', 'secondary', 'danger', 'warning', or 'success'.
+   * @default 'primary'
    */
   @Input()
-  public buttonClass:'primary'|'secondary'='primary';
+  public buttonClass: 'primary' | 'secondary' | 'danger' | 'warning' | 'success' = 'primary';
 
   /**
    * The size of the button.
@@ -18,5 +22,17 @@ export class ButtonComponent {
    * @default 'md'
    */
   @Input()
-  public size:'sm'|'md'|'lg'='md';
+  public size: 'sm' | 'md' | 'lg' = 'md';
+
+  /**
+   * The type of the button. Can be one of 'button', 'submit', or 'reset'.
+   */
+  @Input()
+  public type: 'button' | 'submit' | 'reset' = 'button';
+
+  /**
+   * Event emitter that emits an event when the button is clicked.
+   */
+  @Output()
+  public buttonClick: EventEmitter<void> = new EventEmitter<void>();
 }
