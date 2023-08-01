@@ -1,7 +1,7 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 
 import { TextBoxComponent } from './text-box.component';
-import { UiModule } from '../ui.module';
+import { UiModule } from '../../ui.module';
 import { FormsModule } from '@angular/forms';
 
 type argTypes=TextBoxComponent;

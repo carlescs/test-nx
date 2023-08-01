@@ -1,7 +1,7 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 
 import { ButtonComponent } from './button.component';
-import { UiModule } from '../ui.module';
+import { UiModule } from '../../ui.module';
 
 type argTypes=ButtonComponent & { ngContent: string };
 
