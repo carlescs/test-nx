@@ -30,6 +30,8 @@
             }
           }
         ],
+        "@typescript-eslint/no-inferrable-types": ["off"],
+        "@typescript-eslint/explicit-type-declarations": ["warning", { "allowExpressions": true }],
         "require-jsdoc":[
           "error",
           {
@@ -41,7 +43,6 @@
               "FunctionExpression": true
             }
           }
-        ],
         ]
       },
       "extends": [

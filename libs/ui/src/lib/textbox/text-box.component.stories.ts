@@ -2,6 +2,7 @@ import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 
 import { TextBoxComponent } from './text-box.component';
 import { UiModule } from '../ui.module';
+import { FormsModule } from '@angular/forms';
 
 type argTypes=TextBoxComponent;
 
@@ -11,7 +12,7 @@ const meta: Meta<argTypes> = {
    tags: ['autodocs'],
    decorators: [
       moduleMetadata({
-         imports: [UiModule],
+         imports: [UiModule,FormsModule],
       }),
    ],
    args:{
@@ -33,3 +34,12 @@ export const Disabled: Story = {
         disabled:true
     }
  };
+
+ export const Error: Story = {
+   args: {
+       
+   },
+   render: (story)=>({
+      template: `<ccs-text-box class="ng-invalid ng-touched"></ccs-text-box>`,
+   })
+};

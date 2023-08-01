@@ -20,7 +20,9 @@
             "prefix": "ccs",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/no-inferrable-types": ["off"],
+        "@typescript-eslint/explicit-type-declarations": ["warning", { "allowExpressions": true }]
       },
       "extends": [
         "plugin:@nx/angular",

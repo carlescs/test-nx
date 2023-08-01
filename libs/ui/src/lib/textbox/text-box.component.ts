@@ -64,9 +64,23 @@ export class TextBoxComponent implements ControlValueAccessor {
       this.disabled=isDisabled;
    }
 
+   /**
+    * Calls the onChange function with the new value when the text box value changes.
+    * @param value - The new value of the text box.
+    */
    public valueChanged(value:string): void{
       if(this.onChange){
          this.onChange(value);
+      }
+   }
+
+   /**
+    * Handles the touch event for the text box component.
+    * If the `onTouch` function is defined, it will be called.
+    */
+   public handleTouch(): void{
+      if(this.onTouch){
+         this.onTouch();
       }
    }
 }

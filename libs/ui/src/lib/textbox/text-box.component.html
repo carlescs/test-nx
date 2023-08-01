@@ -1,1 +1,1 @@
-<input type="text" [disabled]="disabled" [ngModel]="value" (ngModelChange)="valueChanged($event)" />
+<input type="text" [disabled]="disabled" [ngModel]="value" (ngModelChange)="valueChanged($event)" (focus)="handleTouch()" />
