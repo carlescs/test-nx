@@ -53,18 +53,19 @@
          "executor": "@angular-devkit/build-angular:dev-server",
          "configurations": {
             "production": {
-               "browserTarget": "test-nx:build:production"
+               "buildTarget": "test-nx:build:production"
             },
             "development": {
-               "browserTarget": "test-nx:build:development"
+               "buildTarget": "test-nx:build:development"
             }
          },
-         "defaultConfiguration": "development"
+         "defaultConfiguration": "development",
+         "continuous": true
       },
       "extract-i18n": {
          "executor": "@angular-devkit/build-angular:extract-i18n",
          "options": {
-            "browserTarget": "test-nx:build"
+            "buildTarget": "test-nx:build"
          }
       },
       "lint": {

@@ -3,6 +3,8 @@
    "$schema": "../../node_modules/nx/schemas/project-schema.json",
    "sourceRoot": "apps/test-nx-e2e/src",
    "projectType": "application",
+   "tags": [],
+   "implicitDependencies": ["test-nx"],
    "targets": {
       "e2e": {
          "executor": "@nx/cypress:cypress",
@@ -27,7 +29,5 @@
             "lintFilePatterns": ["apps/test-nx-e2e/**/*.{js,ts}"]
          }
       }
-   },
-   "tags": [],
-   "implicitDependencies": ["test-nx"]
+   }
 }
