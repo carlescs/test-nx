@@ -51,12 +51,15 @@
       },
       "serve": {
          "executor": "@angular-devkit/build-angular:dev-server",
+         "options": {
+            "buildTarget": "test-nx:build:development"
+         },
          "configurations": {
             "production": {
-               "browserTarget": "test-nx:build:production"
+               "buildTarget": "test-nx:build:production"
             },
             "development": {
-               "browserTarget": "test-nx:build:development"
+               "buildTarget": "test-nx:build:development"
             }
          },
          "defaultConfiguration": "development"
@@ -68,7 +71,7 @@
          }
       },
       "lint": {
-         "executor": "@nx/linter:eslint",
+         "executor": "@nx/eslint:lint",
          "outputs": ["{options.outputFile}"],
          "options": {
             "lintFilePatterns": [

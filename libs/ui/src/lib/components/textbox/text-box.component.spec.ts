@@ -8,8 +8,7 @@ describe('TextBoxComponent', () => {
 
    beforeEach(async () => {
       await TestBed.configureTestingModule({
-         imports: [FormsModule],
-         declarations: [TextBoxComponent],
+         imports: [FormsModule, TextBoxComponent],
       }).compileComponents();
 
       fixture = TestBed.createComponent(TextBoxComponent);

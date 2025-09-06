@@ -1,0 +1,9 @@
+{
+  "run": {
+    "command": "nx run-many -t lint",
+    "startTime": "2025-09-06T15:42:52.476Z",
+    "endTime": "2025-09-06T15:42:52.486Z",
+    "inner": false
+  },
+  "tasks": []
+}

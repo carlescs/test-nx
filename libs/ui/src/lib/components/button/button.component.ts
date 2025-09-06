@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
+   standalone: true,
+   imports: [],
    selector: 'ccs-button',
    templateUrl: './button.component.html',
    styleUrls: ['./button.component.scss'],

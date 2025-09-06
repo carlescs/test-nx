@@ -5,8 +5,8 @@ import { ButtonComponent } from './components/button/button.component';
 import { TextBoxComponent } from './components/textbox/text-box.component';
 
 @NgModule({
-   imports: [CommonModule, FormsModule],
-   declarations: [ButtonComponent, TextBoxComponent],
+   imports: [CommonModule, FormsModule, ButtonComponent, TextBoxComponent],
+   declarations: [],
    exports: [ButtonComponent, TextBoxComponent],
 })
 /**
