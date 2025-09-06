@@ -126,7 +126,7 @@
         },
         {
           "file": "libs/ui/src/test-setup.ts",
-          "hash": "5422837607323937513",
+          "hash": "17711435995618823417",
           "deps": [
             "npm:jest-preset-angular"
           ]
@@ -176,6 +176,48 @@
         {
           "file": "apps/ui-e2e/tsconfig.json",
           "hash": "14724011440875157750"
+        }
+      ],
+      "test-nx-e2e": [
+        {
+          "file": "apps/test-nx-e2e/.eslintrc.json",
+          "hash": "14051689147407195350"
+        },
+        {
+          "file": "apps/test-nx-e2e/cypress.config.ts",
+          "hash": "2067348420416359426",
+          "deps": [
+            "npm:cypress",
+            "npm:@nx/cypress"
+          ]
+        },
+        {
+          "file": "apps/test-nx-e2e/project.json",
+          "hash": "9500221706956236458"
+        },
+        {
+          "file": "apps/test-nx-e2e/src/e2e/app.cy.ts",
+          "hash": "12887259123359832572"
+        },
+        {
+          "file": "apps/test-nx-e2e/src/fixtures/example.json",
+          "hash": "4880489651451668647"
+        },
+        {
+          "file": "apps/test-nx-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/test-nx-e2e/src/support/commands.ts",
+          "hash": "2897778025119979029"
+        },
+        {
+          "file": "apps/test-nx-e2e/src/support/e2e.ts",
+          "hash": "3666078656922506009"
+        },
+        {
+          "file": "apps/test-nx-e2e/tsconfig.json",
+          "hash": "5399589806273284611"
         }
       ],
       "test-nx": [
@@ -257,7 +299,7 @@
         },
         {
           "file": "apps/test-nx/src/test-setup.ts",
-          "hash": "5422837607323937513",
+          "hash": "17711435995618823417",
           "deps": [
             "npm:jest-preset-angular"
           ]
@@ -277,48 +319,6 @@
         {
           "file": "apps/test-nx/tsconfig.spec.json",
           "hash": "17439318772353244196"
-        }
-      ],
-      "test-nx-e2e": [
-        {
-          "file": "apps/test-nx-e2e/.eslintrc.json",
-          "hash": "14051689147407195350"
-        },
-        {
-          "file": "apps/test-nx-e2e/cypress.config.ts",
-          "hash": "2067348420416359426",
-          "deps": [
-            "npm:cypress",
-            "npm:@nx/cypress"
-          ]
-        },
-        {
-          "file": "apps/test-nx-e2e/project.json",
-          "hash": "9500221706956236458"
-        },
-        {
-          "file": "apps/test-nx-e2e/src/e2e/app.cy.ts",
-          "hash": "12887259123359832572"
-        },
-        {
-          "file": "apps/test-nx-e2e/src/fixtures/example.json",
-          "hash": "4880489651451668647"
-        },
-        {
-          "file": "apps/test-nx-e2e/src/support/app.po.ts",
-          "hash": "11157016311132186162"
-        },
-        {
-          "file": "apps/test-nx-e2e/src/support/commands.ts",
-          "hash": "2897778025119979029"
-        },
-        {
-          "file": "apps/test-nx-e2e/src/support/e2e.ts",
-          "hash": "3666078656922506009"
-        },
-        {
-          "file": "apps/test-nx-e2e/tsconfig.json",
-          "hash": "5399589806273284611"
         }
       ]
     },
@@ -346,6 +346,10 @@
       {
         "file": ".gitignore",
         "hash": "2178144051909739023"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "1743485301228659824"
       },
       {
         "file": ".prettierignore",
@@ -389,11 +393,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "7385003662296253856"
+        "hash": "14979528976257235817"
       },
       {
         "file": "package.json",
-        "hash": "1357527797215700635"
+        "hash": "11760578264902801864"
       },
       {
         "file": "tools/tsconfig.tools.json",
