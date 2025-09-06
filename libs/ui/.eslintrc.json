@@ -1,5 +1,5 @@
 {
-   "extends": ["../../.eslintrc.json"],
+   "extends": ["../../.eslintrc.json", "plugin:storybook/recommended"],
    "ignorePatterns": ["!**/*"],
    "overrides": [
       {
@@ -42,7 +42,8 @@
                      "FunctionExpression": true
                   }
                }
-            ]
+            ],
+            "@angular-eslint/prefer-standalone": "off"
          },
          "extends": [
             "plugin:@nx/angular",
