@@ -1,26 +1,31 @@
 @function contrastText($color) {
-    $lightness: lightness($color);
-    @if ($lightness > 50) {
-        @return black;
-    }
-    @else {
-        @return white;
-    }
+   $lightness: lightness($color);
+   @if ($lightness > 50) {
+      @return black;
+   } @else {
+      @return white;
+   }
 }
 
-@mixin buttonStyles($color){
-    background-color: $color;
-    color: contrastText($color);
+@mixin buttonStyles($color) {
+   background-color: $color;
+   color: contrastText($color);
 
-    &:hover{
-        $hovercolor: scale-color($color: $color,$lightness: 30%);
-        background-color: $hovercolor;
-        color: contrastText($hovercolor);
-    }
+   &:hover {
+      $hovercolor: scale-color(
+         $color: $color,
+         $lightness: 30%,
+      );
+      background-color: $hovercolor;
+      color: contrastText($hovercolor);
+   }
 
-    &:active{
-        $activecolor: scale-color($color: $color,$lightness: -30%);
-        background-color: $activecolor;
-        color: contrastText($activecolor);
-    }
+   &:active {
+      $activecolor: scale-color(
+         $color: $color,
+         $lightness: -30%,
+      );
+      background-color: $activecolor;
+      color: contrastText($activecolor);
+   }
 }

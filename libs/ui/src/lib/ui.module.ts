@@ -5,17 +5,11 @@ import { ButtonComponent } from './components/button/button.component';
 import { TextBoxComponent } from './components/textbox/text-box.component';
 
 @NgModule({
-   imports: [
-      CommonModule,
-      FormsModule
-   ],
-   declarations: [
-      ButtonComponent,
-      TextBoxComponent
-   ],
-   exports: [
-      ButtonComponent,
-      TextBoxComponent
-   ],
+   imports: [CommonModule, FormsModule],
+   declarations: [ButtonComponent, TextBoxComponent],
+   exports: [ButtonComponent, TextBoxComponent],
 })
-export class UiModule { }
+/**
+ * UI module that exports common UI components.
+ */
+export class UiModule {}
