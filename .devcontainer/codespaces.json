@@ -1,12 +1,6 @@
 {
   "name": "test-nx Codespace",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "node": {
-      "version": "lts",
-      "nodeGypDependencies": true
-    }
-  },
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
   "forwardPorts": [4200, 4400],
   "postCreateCommand": "CYPRESS_INSTALL_BINARY=0 npm install",
   "extensions": [
