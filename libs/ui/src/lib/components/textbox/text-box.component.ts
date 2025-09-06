@@ -1,7 +1,10 @@
 import { Component, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
+   standalone: true,
+   imports: [CommonModule, FormsModule],
    selector: 'ccs-text-box',
    templateUrl: './text-box.component.html',
    styleUrls: ['./text-box.component.scss'],
