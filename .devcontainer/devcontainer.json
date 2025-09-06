@@ -5,5 +5,23 @@
          "version": "lts",
          "nodeGypDependencies": true
       }
-   }
+   },
+   "postCreateCommand": "CYPRESS_INSTALL_BINARY=0 npm install",
+   "customizations": {
+      "vscode": {
+         "extensions": [
+            "nrwl.angular-console",
+            "angular.ng-template",
+            "esbenp.prettier-vscode",
+            "dbaeumer.vscode-eslint",
+            "ms-vscode.vscode-typescript-next",
+            "storybook.storybook"
+         ],
+         "settings": {
+            "typescript.tsdk": "node_modules/typescript/lib",
+            "editor.formatOnSave": true
+         }
+      }
+   },
+   "remoteUser": "vscode"
 }
