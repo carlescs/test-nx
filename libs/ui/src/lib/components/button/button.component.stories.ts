@@ -3,7 +3,7 @@ import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
 import { UiModule } from '../../ui.module';
 
-type argTypes=ButtonComponent & { ngContent: string };
+type argTypes = ButtonComponent & { ngContent: string };
 
 const meta: Meta<argTypes> = {
    component: ButtonComponent,
@@ -14,33 +14,34 @@ const meta: Meta<argTypes> = {
          imports: [UiModule],
       }),
    ],
-   args:{
+   args: {
       buttonClass: 'primary',
-      size: 'md'
+      size: 'md',
    },
    argTypes: {
       buttonClass: {
-         options: ['primary', 'secondary','danger','warning','success'],
+         options: ['primary', 'secondary', 'danger', 'warning', 'success'],
          control: { type: 'select' },
          label: 'Button Class',
-         name: 'Button Class'
+         name: 'Button Class',
       },
       size: {
          options: ['sm', 'md', 'lg'],
          control: { type: 'select' },
          label: 'Button Size',
-         name: 'Button Size'
+         name: 'Button Size',
       },
       ngContent: {
          control: { type: 'text' },
          label: 'Button Text',
-         name: 'Button Text'
-      }
+         name: 'Button Text',
+      },
    },
    render: (args) => ({
       props: { ...args },
       userDefinedTemplate: true,
-      template: '<ccs-button [buttonClass]="buttonClass" [size]="size">{{ngContent}}</ccs-button>',
+      template:
+         '<ccs-button [buttonClass]="buttonClass" [size]="size">{{ngContent}}</ccs-button>',
    }),
 };
 
@@ -50,38 +51,38 @@ type Story = StoryObj<argTypes>;
 
 export const PrimaryButton: Story = {
    args: {
-      ngContent: "Primary Button",
-      buttonClass: "primary"
-   }
+      ngContent: 'Primary Button',
+      buttonClass: 'primary',
+   },
 };
 
 export const SecondaryButton: Story = {
    args: {
-      ngContent: "Secondary Button",
-      buttonClass: "secondary"
-   }
+      ngContent: 'Secondary Button',
+      buttonClass: 'secondary',
+   },
 };
 
 export const LargeButton: Story = {
    args: {
-      ngContent: "Secondary Button",
-      buttonClass: "primary",
-      size: 'lg'
-   }
+      ngContent: 'Secondary Button',
+      buttonClass: 'primary',
+      size: 'lg',
+   },
 };
 
 export const MediumButton: Story = {
    args: {
-      ngContent: "Secondary Button",
-      buttonClass: "primary",
-      size: 'md'
-   }
+      ngContent: 'Secondary Button',
+      buttonClass: 'primary',
+      size: 'md',
+   },
 };
 
 export const SmallButton: Story = {
    args: {
-      ngContent: "Secondary Button",
-      buttonClass: "primary",
-      size: 'sm'
-   }
+      ngContent: 'Secondary Button',
+      buttonClass: 'primary',
+      size: 'sm',
+   },
 };

@@ -1,59 +1,58 @@
 {
-  "extends": ["../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
-  "overrides": [
-    {
-      "files": ["*.ts"],
-      "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "testNx",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "ccs",
-            "style": "kebab-case"
-          }
-        ],
-        "@typescript-eslint/explicit-member-accessibility": [
-          "error",
-          {
-            "accessibility": "explicit",
-            "overrides": {
-              "constructors": "no-public"
-            }
-          }
-        ],
-        "@typescript-eslint/no-inferrable-types": ["off"],
-        "@typescript-eslint/explicit-type-declarations": ["warning", { "allowExpressions": true }],
-        "require-jsdoc":[
-          "error",
-          {
-            "require": {
-              "FunctionDeclaration": true,
-              "MethodDefinition": true,
-              "ClassDeclaration": true,
-              "ArrowFunctionExpression": true,
-              "FunctionExpression": true
-            }
-          }
-        ]
+   "extends": ["../../.eslintrc.json"],
+   "ignorePatterns": ["!**/*"],
+   "overrides": [
+      {
+         "files": ["*.ts"],
+         "rules": {
+            "@angular-eslint/directive-selector": [
+               "error",
+               {
+                  "type": "attribute",
+                  "prefix": "testNx",
+                  "style": "camelCase"
+               }
+            ],
+            "@angular-eslint/component-selector": [
+               "error",
+               {
+                  "type": "element",
+                  "prefix": "ccs",
+                  "style": "kebab-case"
+               }
+            ],
+            "@typescript-eslint/explicit-member-accessibility": [
+               "error",
+               {
+                  "accessibility": "explicit",
+                  "overrides": {
+                     "constructors": "no-public"
+                  }
+               }
+            ],
+            "@typescript-eslint/no-inferrable-types": ["off"],
+            "require-jsdoc": [
+               "error",
+               {
+                  "require": {
+                     "FunctionDeclaration": true,
+                     "MethodDefinition": true,
+                     "ClassDeclaration": true,
+                     "ArrowFunctionExpression": true,
+                     "FunctionExpression": true
+                  }
+               }
+            ]
+         },
+         "extends": [
+            "plugin:@nx/angular",
+            "plugin:@angular-eslint/template/process-inline-templates"
+         ]
       },
-      "extends": [
-        "plugin:@nx/angular",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ]
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@nx/angular-template"],
-      "rules": {}
-    }
-  ]
+      {
+         "files": ["*.html"],
+         "extends": ["plugin:@nx/angular-template"],
+         "rules": {}
+      }
+   ]
 }
